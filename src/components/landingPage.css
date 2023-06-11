@@ -1,0 +1,55 @@
+/* styles.css */
+
+/* ... existing styles ... */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .loginBtn{
+    margin-left: 80%;
+    margin-bottom: -10rem;
+    height: 2.5rem;
+  }
+  
+  .secondary-button {
+    width: 15rem;
+    height: 5rem;
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  .container{
+    justify-content: center;
+    margin-top: 10%;
+  }
+
+  

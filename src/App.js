@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import HomePage from "./components/homePage"
+import LandingPage from './components/landingPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RegistrationForm from './components/registerForm';
+import LoginPage from './components/loginPage'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   {/* <HomePage/> */}
+   {/* <LandingPage/> */}
+   <Routes>
+        
+        <Route path="/" element={<LandingPage />}/>
+        <Route path="/calculate" element={<HomePage />}/>
+        <Route path="/register" element={<RegistrationForm />}/>
+        <Route path="/login" element={<LoginPage/>}/>
+
+        
+    </Routes>
+
     </div>
   );
 }
