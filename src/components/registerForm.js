@@ -72,10 +72,10 @@ const RegistrationForm = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users', formData);
+      const response = await axios.post('https://taxcalc-socx.onrender.com/api/users', formData);
        localStorage.setItem("token",response.data)
        console.log(response.data)
-       const userD=await axios.post('http://localhost:5000/api/users/userdetails',formData)
+       const userD=await axios.post('hhttps://taxcalc-socx.onrender.com/api/users/userdetails',formData)
        setUserData(userD.data)
        setTaxCreditPoints(userD.data.taxCreditPoints) 
        setSalary(userD.data.salary) 
