@@ -12,7 +12,7 @@ const LandingPage = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      navigator("/calculate")
+      navigator("/")
     }
   }, []);
   const {userData,fullName}=useContext(AppContext)

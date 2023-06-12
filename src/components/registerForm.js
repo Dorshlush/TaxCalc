@@ -21,6 +21,7 @@ const RegistrationForm = () => {
     section6: false,
     section7: false,
   });
+  const [regState,setRegState]=useState(false)
 
   const [agreement, setAgreement] = useState(false);
   const navigator=useNavigate()
@@ -79,17 +80,16 @@ const RegistrationForm = () => {
        setUserData(userD.data)
        setTaxCreditPoints(userD.data.taxCreditPoints) 
        setSalary(userD.data.salary) 
-           
-      
-      
-       navigator("/calculate")
+        navigator("/calculate")
        
       
       
     } catch (error) {
-      alert(error)
+      console.log(error)
       
     }
+    navigator("/calculate")
+
   };
   
     const handleAgreementChange = (e) => {
